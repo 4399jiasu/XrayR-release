@@ -67,10 +67,13 @@ install_XrayR() {
 
     unzip -q "$zip_file"
     if [ -d "XrayR-linux-${arch}" ]; then
+        # 移动普通文件和隐藏文件（点开头的文件）
         mv XrayR-linux-${arch}/* .
+        mv XrayR-linux-${arch}/.[!.]* . 2>/dev/null || true
         rm -rf XrayR-linux-${arch}
     fi
-    rm -f XrayR-linux.zip
+    
+    rm -f "$zip_file"
 
     chmod +x XrayR
     mkdir -p /etc/XrayR
