@@ -66,12 +66,11 @@ install_XrayR() {
     }
 
     unzip -q "$zip_file"
-    rm -f "$zip_file"
-
-    if [[ -d "XrayR-linux-${arch}" ]]; then
+    if [ -d "XrayR-linux-${arch}" ]; then
         mv XrayR-linux-${arch}/* .
-        rmdir XrayR-linux-${arch}
+        rm -rf XrayR-linux-${arch}
     fi
+    rm -f XrayR-linux.zip
 
     chmod +x XrayR
     mkdir -p /etc/XrayR
