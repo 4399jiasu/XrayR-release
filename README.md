@@ -12,7 +12,8 @@ Find the source code here: [XrayR-project/XrayR](https://github.com/XrayR-projec
 # 一键安装
 
 ```
-bash <(curl -Ls https://raw.githubusercontent.com/XrayR-project/XrayR-release/master/install.sh)
+wget -N https://raw.githubusercontent.com/4399jiasu/XrayR-release/master/install.sh && bash install.sh v25.3.6
+
 ```
 # Docker 安装
 
